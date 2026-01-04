@@ -8,7 +8,7 @@ import joblib
 
 
 
-df = pd.read_csv(r"C:\Users\Admin\Downloads\Healthcare Symptoms–Disease Classification DatasetHealthcare Symptoms–Disease Classification Dataset\Healthcare.csv")
+df = pd.read_csv("Healthcare.csv")
 
 df['Symptoms_List'] = df['Symptoms'].str.split(',')
 all_symptoms = sorted(set(sum(df['Symptoms_List'],[])))
@@ -53,6 +53,7 @@ print('Model saved Successfully')
 
 
                          
+
 
 
 
