@@ -10,7 +10,7 @@ def load_model():
 
 @st.cache_data
 def load_data():
-        df = pd.read_csv(r"C:\Users\Admin\Downloads\Healthcare Symptoms–Disease Classification DatasetHealthcare Symptoms–Disease Classification Dataset\Healthcare.csv")
+        df = pd.read_csv("Healthcare.csv")
         df['Symptoms_List'] = df['Symptoms'].str.split(',')
         all_symptoms = sorted(set(sum(df['Symptoms_List'],[])))
         return df,all_symptoms
@@ -136,5 +136,6 @@ if st.sidebar.button('Predict'):
 
 
                          
+
 
 
